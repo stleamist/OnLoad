@@ -8,6 +8,8 @@ typealias ViewController = NSViewController
 typealias ViewControllerRepresentable = NSViewControllerRepresentable
 #endif
 
+#if os(iOS) || os(macOS) || os(tvOS)
+
 class LoadingActionViewController: ViewController {
     
     var action: (() -> Void)?
@@ -92,3 +94,5 @@ public extension View {
         self.modifier(LoadingActionModifier(action: action))
     }
 }
+
+#endif

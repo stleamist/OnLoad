@@ -6,9 +6,11 @@ let package = Package(
     name: "OnLoad",
     platforms: [.iOS(.v13), .macOS(.v10_15), .tvOS(.v13)],
     products: [
-        .library(name: "OnLoad", targets: ["OnLoad"])
+        .library(name: "OnLoad", targets: ["OnLoad"]),
+        .library(name: "OnFirstAppear", targets: ["OnFirstAppear"])
     ],
     targets: [
-        .target(name: "OnLoad")
+        .target(name: "OnLoad"),
+        .target(name: "OnFirstAppear")
     ]
 )
